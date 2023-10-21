@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import animal.Cat;
 
@@ -15,7 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Cat michi = new Cat("pepe","miu");
-        Log.d(TAG, michi.greet());
+        LinearLayout content = findViewById(R.id.content);
+        content.setBackgroundColor(+R.color.black);
+
+        Button primerBoton = new Button(this);
+        primerBoton.setText("hola mundo, soy boton");
+
+        content.addView(primerBoton);
     }
 }
